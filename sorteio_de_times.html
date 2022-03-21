@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
+        body{
+            background: rgb(61, 61, 61);
+            margin: 0px 0px;
+        }
+        header{
+            background-image: linear-gradient(to bottom , rgb(253, 253, 253) , rgb(0, 217, 255));
+            border-bottom: 2px solid black;
+            margin-bottom: 15px;
+        }
+        .título{
+            text-align: center;
+            font-family: 'Merienda One', cursive;
+            color: rgb(0, 0, 0);
+            padding: 10px;
+        }
+        ul{
+            list-style: none;
+            margin-left: 10px;
+            padding: 0px;
+        }
+        h1{
+            text-align: center;
+            font-family: 'Merienda One', cursive;
+            font-size: 18PT;
+            margin: 0px;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.267);
+        }
+        .lista1{
+            background-image: linear-gradient(125deg, rgb(102, 181, 255), white);
+            width: 165px;
+            min-width: 165px;
+            height: 875px;
+            margin: 3px;
+            border-radius: 20px;
+            border: 2px solid black;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.589);
+            position: relative;
+        }
+        li{
+            font: normal 13pt arial;
+            margin: 10px 0px;
+        }
+        .container{
+            display:flex;   
+            justify-content: space-around;
+            align-items: center;
+            max-width: 420px;
+            margin: auto;
+            align-items: flex-start;
+        }
+        #sortear{
+        background-image: linear-gradient(125deg, rgb(148, 149, 150), white);
+        color: rgb(0, 0, 0);
+        height: 135px;
+        width: 135px;
+        min-width: 120px;
+        font: normal 20px arial;
+        border-radius: 200px;
+        position: absolute;
+        left: 15px;
+        bottom: 20px;
+        border: 2px solid black;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.473);
+        }
+        .times{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            min-width: 165px;
+        }
+        #time1{
+            background-image: linear-gradient(125deg, rgb(118, 216, 255), white);
+            margin: 5px 0px;
+            width: 165px;
+            min-width: 165px;
+            border-radius: 20px;
+            border: 2px solid black;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.589);
+        }
+        #time2{
+            background-image: linear-gradient(125deg, rgb(145, 255, 150), white);
+            margin: 5px 0px;
+            width: 165px;
+            min-width: 165px;
+            border-radius: 20px;
+            border: 2px solid black;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.589);
+        }
+        #time3{
+            background-image: linear-gradient(125deg, rgb(242, 255, 126), white);
+            margin: 5px 0px;
+            width: 165px;
+            min-width: 165px;
+            border-radius: 20px;
+            border: 2px solid black;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.589);
+        }
+        #time4{
+            background-image: linear-gradient(125deg, rgb(255, 117, 117), white);
+            margin: 5px 0px;
+            width: 165px;
+            min-width: 165px;
+            border-radius: 20px;
+            border: 2px solid black;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.589);
+        }
+        .container-icones{  
+            display:flex;
+            justify-content: space-between;
+            max-width: 310px;
+            margin:auto;
+            margin-bottom: 10px;
+        }
+        .icone{
+            border: 2px solid black;
+            border-radius: 20px;
+            overflow: hidden;
+            background-image: linear-gradient(125deg, rgb(179, 177, 177), white);
+        }
+        img{
+            max-width: 100px;
+            max-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="título">SORTEIO DE TIMES DO FUTEBOL DE QUINTA</h1>
+    </header>
+
+    <div class="container-icones">
+        <div class="icone"><a href="sorteio_de_times.html"><img src="time02.png" alt="Sortear times"></a></div>
+       <div class="icone"><a href="sorteio_de_próximos.html"><img src="substituir.png" alt="Sortear próximos"></a></div>
+    </div>
+
+    <div class="container">
+        <div class="lista1">
+            <ul>
+                    <li><input onchange="jogadores('Anderson')" type="checkbox" name="Anderson" id="Anderson" class="jogador"><label for="Anderson">Anderson</label></li>
+                    <li><input onchange="jogadores('Bruno-Gaudio')" type="checkbox" name="Bruno-Gaudio" id="Bruno-Gaudio" class="jogador"><label for="Bruno-Gaudio">Bruno-Gaudio</label></li>
+                    <li><input onchange="jogadores('Dantas')" type="checkbox" name="Dantas" id="Dantas" class="jogador"><label for="Dantas">Dantas</label></li>
+                    <li><input onchange="jogadores('Dantoni')" type="checkbox" name="Dantoni" id="Dantoni" class="jogador"><label for="Dantoni">Dantoni</label></li>
+                    <li><input onchange="jogadores('Dudu')" type="checkbox" name="Dudu" id="Dudu" class="jogador"><label for="Dudu">Dudu</label></li>
+                    <li><input onchange="jogadores('Felipe')" type="checkbox" name="Felipe" id="Felipe" class="jogador"><label for="Felipe">Felipe</label></li>
+                    <li><input onchange="jogadores('Gabriel')" type="checkbox" name="Gabriel" id="Gabriel" class="jogador"><label for="Gabriel">Gabriel</label></li>
+                    <li><input onchange="jogadores('Guilherme')" type="checkbox" name="Guilherme" id="Guilherme" class="jogador"><label for="Guilherme">Guilherme</label></li>
+                    <li><input onchange="jogadores('Henrique')" type="checkbox" name="Henrique" id="Henrique" class="jogador"><label for="Henrique">Henrique</label></li>
+                    <li><input onchange="jogadores('Jhow')" type="checkbox" name="Jhow" id="Jhow" class="jogador"><label for="Jhow">Jhow</label></li>
+                    <li><input onchange="jogadores('Klayton')" type="checkbox" name="Klayton" id="Klayton" class="jogador"><label for="Klayton">Klayton</label></li>
+                    <li><input onchange="jogadores('Kneipp')" type="checkbox" name="Kneipp" id="Kneipp" class="jogador"><label for="Kneipp">Kneipp</label></li>
+                    <li><input onchange="jogadores('Matheus')" type="checkbox" name="Matheus" id="Matheus" class="jogador"><label for="Matheus">Matheus</label></li>
+                    <li><input onchange="jogadores('Rafa')" type="checkbox" name="Rafa" id="Rafa" class="jogador"><label for="Rafa">Rafa</label></li>
+                    <li><input onchange="jogadores('Ray')" type="checkbox" name="Ray" id="Ray" class="jogador"><label for="Ray">Ray</label></li>
+                    <li><input onchange="jogadores('Romario')" type="checkbox" name="Romario" id="Romario" class="jogador"><label for="Romario">Romario</label></li>
+                    <li><input onchange="jogadores('Vini-Pescoço')" type="checkbox" name="Vini-Pescoço" id="Vini-Pescoço" class="jogador"><label for="Vini-Pescoço">Vini-Pescoço</label></li>
+                    <li><input onchange="jogadores('Vinicius-Bidu')" type="checkbox" name="Vinicius-Bidu" id="Vinicius-Bidu" class="jogador"><label for="Vinicius-Bidu">Vinicius-Bidu</label></li>
+                    <li><input onchange="jogadores('Vinicius-Dantas')" type="checkbox" name="Vinicius-Dantas" id="Vinicius-Dantas" class="jogador"><label for="Vinicius-Dantas">Vinicius-Dantas</label></li>
+                    <li><input onchange="jogadores('Yago')" type="checkbox" name="Yago" id="Yago" class="jogador"><label for="Yago">Yago</label></li>
+                    <li><input onchange="jogadores('Yuji')" type="checkbox" name="Yuji" id="Yuji" class="jogador"><label for="Yuji">Yuji</label></li>
+            </ul>
+            <input onclick="sortear()" id="sortear" type="button" value="SORTEAR">
+        </div>
+        
+            <div class="times">
+                    <div class="lista" id="time1">
+                        <h1>TIME 1</h1>
+                        <ol>
+                            <li class="presentes"></li>
+                            <li class="presentes"></li>
+                            <li class="presentes"></li>
+                            <li class="presentes"></li>
+                            <li class="presentes"></li>
+                        </ol>
+                    </div>
+                    <div class="lista" id="time2">
+                        <h1>TIME 2</h1>
+                        <ol>
+                            <li class="presentes"></li>
+                            <li class="presentes"></li>
+                            <li class="presentes"></li>
+                            <li class="presentes"></li>
+                            <li class="presentes"></li>
+                        </ol>
+                    </div>
+                    <div class="lista" id="time3">
+                        <h1>TIME 3</h1>
+                        <ol>
+                            <li class="presentes"></li>
+                            <li class="presentes"></li>
+                            <li class="presentes"></li>
+                            <li class="presentes"></li>
+                            <li class="presentes"></li>
+                        </ol>
+                    </div>
+                    <div class="lista" id="time4">
+                        <h1>TIME 4</h1>
+                        <ol>
+                            <li class="presentes"></li>
+                            <li class="presentes"></li>
+                            <li class="presentes"></li>
+                            <li class="presentes"></li>
+                            <li class="presentes"></li>
+                        </ol>
+
+                                </div>
+                </div>
+    </div>
+
+
+    <script>
+        var jog = []
+        var sorteados = []
+
+        //inclui jogadores
+        function jogadores (jogador) {
+            var checkbox = document.getElementById(jogador)
+                if(jog.indexOf(jogador) < 0){
+                    jog.push(jogador)
+                } else if (jog.indexOf(jogador) >= 0) {
+                    jog.splice(jog.indexOf(jogador), 1)
+                }
+
+                /*for(num = 0; num < 20; num++){                                     
+                    document.getElementsByClassName('presentes')[num].innerHTML = ''
+                } 
+               
+                for(num = 0; num < jog.length; num++){                                                     
+                    document.getElementsByClassName('presentes')[num].innerHTML = jog[num]
+                }*/
+        }
+
+        
+        //sorteia os jogadores
+        function sortear(){
+            
+            for(num = 0; num < 20; num++){
+                    document.getElementsByClassName('presentes')[num].innerHTML = ''
+                }
+            
+            function sorteio () {
+                    return Math.floor(Math.random() * jog.length)
+                }
+
+
+                while(sorteados.length < jog.length){
+                
+                    var resultado = sorteio()
+
+                    if (sorteados.indexOf(resultado) === -1){
+                        sorteados.push(resultado)
+                    }
+            
+                }
+            
+                for(num = 0; num < jog.length; num++){
+                    var numero = sorteados[num]                                                     
+                    document.getElementsByClassName('presentes')[num].innerHTML = jog[numero]
+                }
+            sorteados = []
+                
+        }
+        
+
+    </script>
+</body>
+</html>
