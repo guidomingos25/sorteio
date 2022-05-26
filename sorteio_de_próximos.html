@@ -306,7 +306,7 @@
                 }
 
                 if (times.length > 5) {
-                    alert('O número de jogadoresdeve ser no máximo 5!')
+                    alert('O número de jogadores deve ser no máximo 5!')
                 } else {
 
                     for (let i = 0; i < 5; i++) {
@@ -317,7 +317,7 @@
                         return Math.floor(Math.random() * times.length)
                     }
 
-                    if(times.length > sai) {
+                    if(times.length >= sai) {
                     while (sorteados.length < sai) {
                         resultado = sorteio()
 
